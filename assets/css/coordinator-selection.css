@@ -1,0 +1,49 @@
+.form {
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+                        115deg,
+                        rgba(58, 58, 158, 0.8),
+                        rgba(8, 8, 190, 0.7)
+                    ),
+                    url('../img/team.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.form>form {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    padding: 5vh 5vw;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .form>form {
+        background-color: #fff;
+        border-radius: 8px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10vh;
+        padding: 5vh 1vw;
+        justify-content: center;
+    }
+
+    .form input {
+        width: 90%;
+    }
+}
+
+.form>form>h3 {
+    font-weight: bolder;
+}
+
+.form div input, .form div label {
+    display: block;
+    margin: auto
+
+}
