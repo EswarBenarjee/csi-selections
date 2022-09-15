@@ -32,14 +32,14 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/coordinator-selection.css">
 </head>
 
 <body class="page-index">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid acontainer-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/csi.png" alt="">
@@ -53,145 +53,88 @@
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
-          <li><a href="./resources.html" class="active">Resources</a></li>
-          <li><a href="./selections.html">Selections</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./index.html" class="active">Selections</a></li>
           <li><a href="">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-  
-  <section id="hero" class="hero">
-    <div class="content">
-      <h2>Resources</h2>
-      <p>Here are some resources you can use to learn more about the field of Computer Science.</p>
 
-      <div class="types">
-        <button class="bold">DSA</button> <button>Competitive Programming</button> <button>Web</button> <button>AI - ML</button> <button>Designing</button>
-      </div>
-    </div>
-  </section>
+  <section id="form" class="container-fluid form">
+    <form action="./index.html" class="row px-2 px-mb-5" method="post" onsubmit="return validate()">
+        <h3 class="text-center mb-5">CSI Coordinator Selections</h3>
 
-  <section id="resources" class="container-fluid resources row">
-    <div class="card col-md-3 m-3">
-      <a href="https://www.linkedin.com/company/gmrit-csi/">
-        <img src="assets/img/resources/linkedIn.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">LinkedIn</h3>
-          <p>Showcase your skills and certificates to increase connections and attract recruiters </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <input type="text" class="form-control" id="floatingInput name" name="name" placeholder="Name" e>
+            <label for="floatingInput">Name</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://github.com/EswarBenarjee?tab=repositories">
-        <img src="assets/img/resources/github.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">GitHub</h3>
-          <p>If LinkedIn is to showcase, then GitHub is to store files. Host and unlock sweet benefits through GitHub Student Developer Pack. </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <input type="text" class="form-control" id="floatingInput jntuno" name="jntuno" placeholder="21341A----">
+            <label for="floatingInput">Jntu Number</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://www.geeksforgeeks.org/">
-        <img src="assets/img/resources/geeksforgeeks.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">GeeksforGeeks</h3>
-          <p>Skills can be learned and DSA can be mastered. Master your DSA skills by getting even the best examples. </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <input type="email" class="form-control" id="floatingInput email" name="email" placeholder="jntuno@gmrit.edu.in">
+            <label for="floatingInput">Email</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://www.hackerrank.com/">
-        <img src="assets/img/resources/hackerrank.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">HackerRank</h3>
-          <p>Consistency is the key to success! Practice your basics here. </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <select class="form-select" id="floatingSelect dept" name="dept" aria-label="Floating label select example">
+                <option value="cse" selected>Computer Science Engineering</option>
+                <option value="aiml">Computer Science Engineering AI-ML</option>
+                <option value="aids">Computer Science Engineering AI-DS</option>
+                <option value="it">Information Technology</option>
+            </select>
+            <label for="floatingSelect">Department</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://leetcode.com/problemset/all/">
-        <img src="assets/img/resources/leetcode.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">LeetCode</h3>
-          <p>Level up your DSA skills and Join the elite here! </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <input type="text" class="form-control" id="floatingInput year" name="year" placeholder="" value="2" disabled>
+            <label for="floatingInput">Year</label>
         </div>
-      </a>
-    </div>
-    <div class="card col-md-3 m-3">
-      <a href="https://www.w3schools.com/">
-        <img src="assets/img/resources/w3schools.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">W3schools</h3>
-          <p>Checking out Web Development? Here, you can learn the best of Web. </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+          <select class="form-select" id="floatingSelect section" name="section" aria-label="Floating label select example">
+              <option value="a" selected>Section A</option>
+              <option value="b">Section B</option>
+              <option value="c">Section C</option>
+          </select>
+          <label for="floatingSelect">Section</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://www.youtube.com/user/krishnaik06">
-        <img src="assets/img/resources/krishNaik.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">Krish Naik</h3>
-          <p>A teacher who is so brilliant that he can turn a student to a AI Model. </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <input type="text" class="form-control" id="floatingInput phone" name="phone" placeholder="Phone Number">
+            <label for="floatingInput">Phone Number</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://towardsdatascience.com/">
-        <img src="assets/img/resources/towardsDataScience.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">Towards Data Science</h3>
-          <p>As skills are to learned, Doubts are to clarified. Clarify your doubts about AI-ML here. </p>
+        <div class="form-floating col-md-5 m-3 p-0">
+          <select class="form-select" id="floatingSelect domain" name="domain" aria-label="Floating label select example">
+              <option value="coding" selected>Competitive Programming</option>
+              <option value="ds">Data Science</option>
+              <option value="web">Web Development</option>
+              <option value="ml">Machine Learning</option>
+              <option value="app">App Development</option>
+              <option value="iot">Internet of Things</option>
+              <option value="cyber">Cyber Security</option>
+              <option value="cloud">Cloud Computing</option>
+              <option value="blockchain">Blockchain</option>
+              <option value="game">Game Development</option>
+              <option value="design">UI/UX Design</option>
+          </select>
+          <label for="floatingSelect">Interested Domain</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://machinelearningmastery.com/">
-        <img src="assets/img/resources/machineLearningMastery.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">Machine Learning Mastery</h3>
-          <p>Ask doubts, reply answers, upvote suggestions to build a better community. </p>
+        <div class="form-floating col-md-10 m-3 p-0">
+          <textarea class="form-control" placeholder="" id="floatingTextarea why" name="why"></textarea>
+          <label for="floatingTextarea" class="floatingTextarea">Why do you want to be a CSI Coordinator?</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://www.kaggle.com/">
-        <img src="assets/img/resources/kaggle.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">Kaggle</h3>
-          <p>Has all the collections you need to build a AI-ML Model </p>
+        <div class="form-floating col-md-10 m-3 p-0">
+          <textarea class="form-control" placeholder="" id="floatingTextarea contribute" name="contribute"></textarea>
+          <label for="floatingTextarea" class="floatingTextarea">How would you contribute to CSI?</label>
         </div>
-      </a>
-    </div>
-
-    <div class="card col-md-3 m-3">
-      <a href="https://www.canva.com/">
-        <img src="assets/img/resources/canva.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">Canva</h3>
-          <p>Shape your Creative and Innovative minds using this designer tool. </p>
+        <div class="form-floating col-md-10 m-3 p-0">
+          <textarea class="form-control" placeholder="" id="floatingTextarea promote" name="promote"></textarea>
+          <label for="floatingTextarea" class="floatingTextarea">How would you promote CSI in your class?</label>
         </div>
-      </a>
-    </div>
-    
-    <div class="card col-md-3 m-3">
-      <a href="https://stackoverflow.com/">
-        <img src="assets/img/resources/stackoverflow.png" class="card-img-top" alt="LinkedIn">
-        <div class="card-body">
-          <h3 class="card-title">StackOverFlow</h3>
-          <p>A Technical Community of professionals, freshers and many more! Reach out and ask for help. </p>
+        <div class="col-md-11 m-3 p-0">
+          <input type="submit" id="submit" class="btn btn-primary" value="Submit">
         </div>
-      </a>
-    </div>
+    </form>
   </section>
 
   <!-- ======= Footer ======= -->
@@ -200,7 +143,7 @@
     <div class="footer-content">
       <div class="container">
         <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
+          <div class="col-lg-5 col-md-5-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
               <span style="color: var(--csi-blue);">CSI GMRIT</span>
             </a>
@@ -228,14 +171,13 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <div class="col-lg-3 col-md-5-12 footer-contact text-center text-md-start">
             <h4>Virtual Contact</h4>
             <p>
               <strong>Whatsapp:</strong> <a href="https://api.whatsapp.com/send?phone=919618184770">CSI</a><br>
               <strong>Email:</strong> <a href="mailto:csi@gmrit.edu.in">csi@gmrit.edu.in</a><br>
               <strong>Phone:</strong> <a href="tel:+919618184770">+91 9618184770</a><br>
             </p>
-
           </div>
 
         </div>
@@ -260,9 +202,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- Sweet Alert 2 -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/selections.js"></script>
 </body>
 
 </html>
