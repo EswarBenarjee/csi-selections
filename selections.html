@@ -54,7 +54,7 @@
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="./index.html">Resources</a></li>
-          <li><a href="./events.html" class="active">Events</a></li>
+          <li><a href="./selections.html" class="active">Selections</a></li>
           <li><a href="">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
@@ -63,32 +63,76 @@
   </header><!-- End Header -->
 
   <section id="form" class="container-fluid form">
-    <form action="" class="row align-items-center px-2 px-mb-5" method="post">
-        <h3 class="text-center mb-5 csi-blue">CSI Coordinator Selections</h3>
+    <form action="./index.html" class="row px-2 px-mb-5" method="post" onsubmit="return validate()">
+        <h3 class="text-center mb-5">CSI Coordinator Selections</h3>
 
         <div class="form-floating col-md-5 m-3 p-0">
-            <input type="email" class="form-control" id="floatingInput" placeholder="Name">
+            <input type="text" class="form-control" id="floatingInput name" name="name" placeholder="Name" e>
             <label for="floatingInput">Name</label>
         </div>
         <div class="form-floating col-md-5 m-3 p-0">
-            <input type="email" class="form-control" id="floatingInput" placeholder="21341A----">
+            <input type="text" class="form-control" id="floatingInput jntuno" name="jntuno" placeholder="21341A----">
             <label for="floatingInput">Jntu Number</label>
         </div>
         <div class="form-floating col-md-5 m-3 p-0">
-            <input type="email" class="form-control" id="floatingInput" placeholder="jntuno@gmrit.edu.in">
+            <input type="email" class="form-control" id="floatingInput email" name="email" placeholder="jntuno@gmrit.edu.in">
             <label for="floatingInput">Email</label>
         </div>
         <div class="form-floating col-md-5 m-3 p-0">
-            <input type="email" class="form-control disabled" id="floatingInput" placeholder="" value="2">
+            <select class="form-select" id="floatingSelect dept" name="dept" aria-label="Floating label select example">
+                <option value="cse" selected>Computer Science Engineering</option>
+                <option value="aiml">Computer Science Engineering AI-ML</option>
+                <option value="aids">Computer Science Engineering AI-DS</option>
+                <option value="it">Information Technology</option>
+            </select>
+            <label for="floatingSelect">Department</label>
+        </div>
+        <div class="form-floating col-md-5 m-3 p-0">
+            <input type="text" class="form-control" id="floatingInput year" name="year" placeholder="" value="2" disabled>
             <label for="floatingInput">Year</label>
         </div>
         <div class="form-floating col-md-5 m-3 p-0">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+          <select class="form-select" id="floatingSelect section" name="section" aria-label="Floating label select example">
+              <option value="a" selected>Section A</option>
+              <option value="b">Section B</option>
+              <option value="c">Section C</option>
+          </select>
+          <label for="floatingSelect">Section</label>
         </div>
         <div class="form-floating col-md-5 m-3 p-0">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <input type="text" class="form-control" id="floatingInput phone" name="phone" placeholder="Phone Number">
+            <label for="floatingInput">Phone Number</label>
+        </div>
+        <div class="form-floating col-md-5 m-3 p-0">
+          <select class="form-select" id="floatingSelect domain" name="domain" aria-label="Floating label select example">
+              <option value="coding" selected>Competitive Programming</option>
+              <option value="ds">Data Science</option>
+              <option value="web">Web Development</option>
+              <option value="ml">Machine Learning</option>
+              <option value="app">App Development</option>
+              <option value="iot">Internet of Things</option>
+              <option value="cyber">Cyber Security</option>
+              <option value="cloud">Cloud Computing</option>
+              <option value="blockchain">Blockchain</option>
+              <option value="game">Game Development</option>
+              <option value="design">UI/UX Design</option>
+          </select>
+          <label for="floatingSelect">Interested Domain</label>
+        </div>
+        <div class="form-floating col-md-10 m-3 p-0">
+          <textarea class="form-control" placeholder="" id="floatingTextarea why" name="why"></textarea>
+          <label for="floatingTextarea" class="floatingTextarea">Why do you want to be a CSI Coordinator?</label>
+        </div>
+        <div class="form-floating col-md-10 m-3 p-0">
+          <textarea class="form-control" placeholder="" id="floatingTextarea contribute" name="contribute"></textarea>
+          <label for="floatingTextarea" class="floatingTextarea">How would you contribute to CSI?</label>
+        </div>
+        <div class="form-floating col-md-10 m-3 p-0">
+          <textarea class="form-control" placeholder="" id="floatingTextarea promote" name="promote"></textarea>
+          <label for="floatingTextarea" class="floatingTextarea">How would you promote CSI in your class?</label>
+        </div>
+        <div class="col-md-11 m-3 p-0">
+          <input type="submit" id="submit" class="btn btn-primary" value="Submit">
         </div>
     </form>
   </section>
@@ -134,7 +178,6 @@
               <strong>Email:</strong> <a href="mailto:csi@gmrit.edu.in">csi@gmrit.edu.in</a><br>
               <strong>Phone:</strong> <a href="tel:+919618184770">+91 9618184770</a><br>
             </p>
-
           </div>
 
         </div>
@@ -159,9 +202,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- Sweet Alert 2 -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/selections.js"></script>
 </body>
 
 </html>
