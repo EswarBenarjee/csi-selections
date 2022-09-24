@@ -9,13 +9,14 @@ let phone = document.getElementById('floatingInput phone');
 let domain = document.getElementById('floatingSelect domain');
 let main = document.getElementById('floatingSelect main');
 let sub = document.getElementById('floatingSelect sub');
-let residence = document.getElementById('floatingTextarea residence');
+let residence = document.getElementById('floatingSelect residence');
 let why = document.getElementById('floatingTextarea why');
 let contribute = document.getElementById('floatingTextarea contribute');
 let promote = document.getElementById('floatingTextarea promote');
 let form = document.getElementsByClassName('form')[0];
 
 function validate() {
+    console.log('Validating...');
     if (name.value.trim() == "") {
         Swal.fire(
             'Name',
@@ -106,8 +107,8 @@ function validate() {
         phone: phone.value,
         domain: domain.value,
         main: main.value,
-        sub: sub.value,
         residence: residence.value,
+        sub: sub.value,
         why: why.value,
         contribute: contribute.value,
         promote: promote.value
@@ -122,13 +123,15 @@ function validate() {
                 'Content-Type': 'application/json'
             }
         }
-    ).then(() => {
-        Swal.fire(
-            'Success',
-            'Your response has been recorded',
-            'success'
-        );
-    });
+    );
+
+    Swal.fire(
+        'Success',
+        'Your response has been recorded',
+        'success'
+    );
+
+    form.reset();
 
     return false;
 }
