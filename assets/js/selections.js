@@ -9,6 +9,7 @@ let phone = document.getElementById('floatingInput phone');
 let domain = document.getElementById('floatingSelect domain');
 let main = document.getElementById('floatingSelect main');
 let sub = document.getElementById('floatingSelect sub');
+let residence = document.getElementById('floatingTextarea residence');
 let why = document.getElementById('floatingTextarea why');
 let contribute = document.getElementById('floatingTextarea contribute');
 let promote = document.getElementById('floatingTextarea promote');
@@ -106,6 +107,7 @@ function validate() {
         domain: domain.value,
         main: main.value,
         sub: sub.value,
+        residence: residence.value,
         why: why.value,
         contribute: contribute.value,
         promote: promote.value
@@ -120,13 +122,13 @@ function validate() {
                 'Content-Type': 'application/json'
             }
         }
-    );
-    
-    Swal.fire(
-        'Success',
-        'Your response has been recorded',
-        'success'
-    );
+    ).then(() => {
+        Swal.fire(
+            'Success',
+            'Your response has been recorded',
+            'success'
+        );
+    });
 
     return false;
 }
