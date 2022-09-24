@@ -181,6 +181,8 @@ domain.addEventListener('change', selectDomain);
 function sectionValidate() {
     if(dept.value == 'aiml' || dept.value == 'aids') {
         section.disabled = true;
+    } else {
+        section.disabled = false;
     }
 }
 dept.addEventListener('change', sectionValidate);
