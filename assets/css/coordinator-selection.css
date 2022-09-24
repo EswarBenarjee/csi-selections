@@ -1,15 +1,12 @@
 .form {
     background: var(--color-darkblue);
-    background-image: linear-gradient(
-                        115deg,
-                        rgba(58, 58, 158, 0.8),
-                        rgba(8, 8, 190, 0.7)
-                    ),
-                    url('../img/team.jpg');
+    background-image: url('../videos/tech.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .form>form {
@@ -72,4 +69,20 @@
 .form div input, .form div label {
     display: block;
     margin: auto;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 99;
+}
+#preloader video {
+    height: 100%;
+    width: 100%;
 }

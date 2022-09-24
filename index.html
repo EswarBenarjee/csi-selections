@@ -39,7 +39,7 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid acontainer-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/csi.png" alt="">
@@ -53,8 +53,8 @@
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
-          <li><a href="./resources.html">Resources</a></li>
-          <li><a href="./index.html" class="active">Selections</a></li>
+          <li><a href="./resources.html" class="active">Resources</a></li>
+          <li><a href="./index.html">Selections</a></li>
           <li><a href="">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
@@ -70,14 +70,17 @@
             <input type="text" class="form-control" id="floatingInput name" name="name" placeholder="Name" e>
             <label for="floatingInput">Name</label>
         </div>
+
         <div class="form-floating col-md-5 m-3 p-0">
             <input type="text" class="form-control" id="floatingInput jntuno" name="jntuno" placeholder="21341A----">
             <label for="floatingInput">Jntu Number</label>
         </div>
+
         <div class="form-floating col-md-5 m-3 p-0">
             <input type="email" class="form-control" id="floatingInput email" name="email" placeholder="jntuno@gmrit.edu.in">
             <label for="floatingInput">Email</label>
         </div>
+        
         <div class="form-floating col-md-5 m-3 p-0">
             <select class="form-select" id="floatingSelect dept" name="dept" aria-label="Floating label select example">
                 <option value="cse" selected>Computer Science Engineering</option>
@@ -87,10 +90,12 @@
             </select>
             <label for="floatingSelect">Department</label>
         </div>
+
         <div class="form-floating col-md-5 m-3 p-0">
             <input type="text" class="form-control" id="floatingInput year" name="year" placeholder="" value="2" disabled>
             <label for="floatingInput">Year</label>
         </div>
+
         <div class="form-floating col-md-5 m-3 p-0">
           <select class="form-select" id="floatingSelect section" name="section" aria-label="Floating label select example">
               <option value="a" selected>Section A</option>
@@ -99,30 +104,55 @@
           </select>
           <label for="floatingSelect">Section</label>
         </div>
+
         <div class="form-floating col-md-5 m-3 p-0">
             <input type="text" class="form-control" id="floatingInput phone" name="phone" placeholder="Phone Number">
             <label for="floatingInput">Phone Number</label>
         </div>
+        
         <div class="form-floating col-md-5 m-3 p-0">
           <select class="form-select" id="floatingSelect domain" name="domain" aria-label="Floating label select example">
               <option value="technical" selected>Technical</option>
-              <option value="nontechnical" selected>Non Technical</option>
-              <option value="designing" selected>Designing</option>
+              <option value="nontechnical">Non Technical</option>
+              <option value="designing">Designing</option>
           </select>
           <label for="floatingSelect">Interested Domain</label>
         </div>
+        
+        <div class="form-floating col-md-5 m-3 p-0">
+          <select class="form-select" id="floatingSelect main" name="main" aria-label="Floating label select example">
+              <option value="cp" selected>Competitive Programming</option>
+              <option value="web">Web Development</option>
+              <option value="ml">Machine Learning</option>
+              <option value="cyber">Cyber Security</option>
+          </select>
+          <label for="floatingSelect">Main Interested Field in Domain</label>
+        </div>
+        <div class="form-floating col-md-5 m-3 p-0">
+          <select class="form-select" id="floatingSelect sub" name="sub" aria-label="Floating label select example">
+              <option value="cp">Competitive Programming</option>
+              <option value="web" selected>Web Development</option>
+              <option value="ml">Machine Learning</option>
+              <option value="cyber">Cyber Security</option>
+          </select>
+          <label for="floatingSelect">Interested Sub Field in Domain</label>
+        </div>  
+
         <div class="form-floating col-md-10 m-3 p-0">
           <textarea class="form-control" placeholder="" id="floatingTextarea why" name="why"></textarea>
           <label for="floatingTextarea" class="floatingTextarea">Why do you want to be a CSI Coordinator?</label>
         </div>
+
         <div class="form-floating col-md-10 m-3 p-0">
           <textarea class="form-control" placeholder="" id="floatingTextarea contribute" name="contribute"></textarea>
           <label for="floatingTextarea" class="floatingTextarea">How would you contribute to CSI?</label>
         </div>
+        
         <div class="form-floating col-md-10 m-3 p-0">
           <textarea class="form-control" placeholder="" id="floatingTextarea promote" name="promote"></textarea>
           <label for="floatingTextarea" class="floatingTextarea">How would you promote CSI in your class?</label>
         </div>
+
         <div class="col-md-11 m-3 p-0">
           <input type="submit" id="submit" class="btn btn-primary" value="Submit">
         </div>

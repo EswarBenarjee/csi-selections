@@ -7,9 +7,12 @@ let year = document.getElementById('floatingInput year');
 let section = document.getElementById('floatingSelect section');
 let phone = document.getElementById('floatingInput phone');
 let domain = document.getElementById('floatingSelect domain');
+let main = document.getElementById('floatingSelect main');
+let sub = document.getElementById('floatingSelect sub');
 let why = document.getElementById('floatingTextarea why');
 let contribute = document.getElementById('floatingTextarea contribute');
 let promote = document.getElementById('floatingTextarea promote');
+let form = document.getElementsByClassName('form')[0];
 
 function validate() {
     if (name.value.trim() == "") {
@@ -21,6 +24,7 @@ function validate() {
         name.focus();
         return false;
     }
+
     if (jntuno.value.trim() == "" || jntuno.value.length != 10) {
         Swal.fire(
             'JNTU Number',
@@ -48,6 +52,16 @@ function validate() {
             'error'
         );
         phone.focus();
+        return false;
+    }
+    
+    if (main.value == sub.value) {
+        Swal.fire(
+            'Interested fields',
+            'Main Interest and Sub Interest cannot be same',
+            'error'
+        );
+        main.focus();
         return false;
     }
     
@@ -90,6 +104,8 @@ function validate() {
         section: section.value,
         phone: phone.value,
         domain: domain.value,
+        main: main.value,
+        sub: sub.value,
         why: why.value,
         contribute: contribute.value,
         promote: promote.value
@@ -116,3 +132,50 @@ function validate() {
 
     return false;
 }
+
+function selectDomain() {
+    if(domain.value == 'technical') {
+        form.style.backgroundImage = "url('assets/videos/tech.gif')";
+        main.innerHTML = `
+        <option value="cp" selected>Competitive Programming</option>
+            <option value="web">Web Development</option>
+            <option value="ml">Machine Learning</option>
+            <option value="cyber">Cyber Security</option>
+            <option value="Others">Others</option>
+        `;
+        sub.innerHTML = `
+        <option value="cp">Competitive Programming</option>
+            <option value="web" selected>Web Development</option>
+            <option value="ml">Machine Learning</option>
+            <option value="cyber">Cyber Security</option>
+            <option value="Others">Others</option>
+        `;
+    } else if(domain.value == 'nontechnical') {
+        form.style.backgroundImage = "url('assets/videos/speaking.webp')";
+        main.innerHTML = `
+        <option value="promotion" selected>Promotions</option>
+            <option value="anchor">Anchoring</option>
+            <option value="cms">Content Management</option>
+            <option value="social">Social Media</option>
+        `;
+        sub.innerHTML = `
+        <option value="promotion">Promotions</option>
+            <option value="anchor" selected>Anchoring</option>
+            <option value="cms">Content Management</option>
+            <option value="social">Social Media</option>
+        `;
+    } else if(domain.value == 'designing') {
+        form.style.backgroundImage = "url('assets/videos/design.webp')";
+        main.innerHTML = `
+        <option value="poster" selected>Poster Designing</option>
+            <option value="video">Video Designing</option>
+            <option value="editing">Editing</option>
+        `;
+        sub.innerHTML = `
+        <option value="poster">Poster Designing</option>
+            <option value="video" selected>Video Designing</option>
+            <option value="editing">Editing</option>
+        `;
+    }
+}
+domain.addEventListener('change', selectDomain);
