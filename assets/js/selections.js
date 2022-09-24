@@ -128,8 +128,6 @@ function validate() {
         'success'
     );
 
-
-
     return false;
 }
 
@@ -155,13 +153,13 @@ function selectDomain() {
         main.innerHTML = `
         <option value="promotion" selected>Promotions</option>
             <option value="anchor">Anchoring</option>
-            <option value="cms">Content Management</option>
+            <option value="cms">Content Writing</option>
             <option value="social">Social Media</option>
         `;
         sub.innerHTML = `
         <option value="promotion">Promotions</option>
             <option value="anchor" selected>Anchoring</option>
-            <option value="cms">Content Management</option>
+            <option value="cms">Content Writing</option>
             <option value="social">Social Media</option>
         `;
     } else if(domain.value == 'designing') {
@@ -179,3 +177,10 @@ function selectDomain() {
     }
 }
 domain.addEventListener('change', selectDomain);
+
+function sectionValidate() {
+    if(dept.value == 'aiml' || dept.value == 'aids') {
+        section.disabled = true;
+    }
+}
+dept.addEventListener('change', sectionValidate);
