@@ -131,7 +131,9 @@ function validate() {
         'success'
     );
 
-    form.reset();
+    setTimeout(() => {
+        window.location.replace("./resources.html");
+    }, 2500);
 
     return false;
 }
